@@ -1,12 +1,12 @@
-# Review
-
-Review the current changes following validate-docbr patterns.
-
 ---
 description: Reviews current changes following project patterns.
 allowed-tools: Read Grep Glob Bash
 agent: reviewer
 ---
+
+# Review
+
+Review the current changes following validate-docbr patterns.
 
 1. Run `git diff` to see unstaged changes
 2. Run `git diff --cached` to see staged changes
