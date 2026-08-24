@@ -4,7 +4,16 @@ from validate_docbr.DocumentBase import DocumentBase
 
 
 class TituloEleitoral(DocumentBase):
-    """Classe referente ao Título Eleitoral."""
+    """Classe referente ao Título Eleitoral.
+
+    Fonte normativa: Resolução TSE nº 23.659/2021, Art. 36, que define a
+    composição do número de inscrição (8 dígitos sequenciais + 2 de UF +
+    2 verificadores) e o cálculo dos verificadores por Módulo 11.
+
+    Há implementações que aplicam uma exceção para SP e MG (resto 0
+    resultaria em dígito 1). Essa ressalva não consta na Resolução e
+    não é implementada aqui — ver issue #70.
+    """
 
     def __init__(self) -> None:
         self.digits = list(range(10))
